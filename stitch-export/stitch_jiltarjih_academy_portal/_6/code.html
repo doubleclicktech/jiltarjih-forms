@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container": "#f0edec",
+                "on-surface-variant": "#594236",
+                "on-surface": "#1c1b1b",
+                "on-tertiary-fixed": "#370e00",
+                "on-primary-container": "#4e1d00",
+                "secondary-fixed-dim": "#ffb68e",
+                "tertiary": "#a53c00",
+                "on-tertiary-container": "#521a00",
+                "inverse-surface": "#313030",
+                "error-container": "#ffdad6",
+                "background": "#fcf9f8",
+                "surface-bright": "#fcf9f8",
+                "on-secondary-fixed-variant": "#773300",
+                "tertiary-fixed": "#ffdbce",
+                "surface-container-lowest": "#ffffff",
+                "inverse-on-surface": "#f3f0ef",
+                "surface-container-low": "#f6f3f2",
+                "on-primary-fixed-variant": "#783100",
+                "on-secondary-fixed": "#331200",
+                "inverse-primary": "#ffb691",
+                "tertiary-container": "#fb620e",
+                "on-tertiary": "#ffffff",
+                "on-primary": "#ffffff",
+                "on-background": "#1c1b1b",
+                "surface": "#fcf9f8",
+                "surface-container-high": "#ebe7e7",
+                "error": "#ba1a1a",
+                "surface-variant": "#e5e2e1",
+                "tertiary-fixed-dim": "#ffb598",
+                "primary": "#9e4300",
+                "on-error-container": "#93000a",
+                "surface-container-highest": "#e5e2e1",
+                "primary-fixed-dim": "#ffb691",
+                "on-primary-fixed": "#341100",
+                "secondary-container": "#ff7a1b",
+                "on-secondary": "#ffffff",
+                "outline": "#8d7164",
+                "on-secondary-container": "#5e2700",
+                "surface-dim": "#dcd9d9",
+                "primary-fixed": "#ffdbcb",
+                "on-tertiary-fixed-variant": "#7e2c00",
+                "surface-tint": "#9e4300",
+                "secondary-fixed": "#ffdbca",
+                "primary-container": "#f26a00",
+                "secondary": "#9c4500",
+                "on-error": "#ffffff",
+                "outline-variant": "#e1c0b1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin": "32px",
+                "unit": "8px",
+                "gutter": "24px",
+                "container-max": "1280px"
+            },
+            "fontFamily": {
+                "h2": ["Cairo"],
+                "h1": ["Cairo"],
+                "body-md": ["Tajawal"],
+                "body-lg": ["Tajawal"],
+                "h3": ["Cairo"],
+                "label-sm": ["Tajawal"]
+            },
+            "fontSize": {
+                "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                "h1": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#9e4300 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm h-16 flex  justify-between items-center px-gutter">
+<div class="flex  items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-colors duration-200 active:scale-95">menu</span>
+<h1 class="font-h3 text-lg font-bold text-primary">أكاديمية جيل ترجيح</h1>
+</div>
+<nav class="hidden md:flex  items-center gap-8">
+<a class="font-label-sm text-label-sm text-primary font-bold transition-colors duration-200 cursor-pointer" href="#">الرئيسية</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:bg-primary-fixed-dim transition-colors duration-200 cursor-pointer px-2 py-1 rounded" href="#">المشاريع</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:bg-primary-fixed-dim transition-colors duration-200 cursor-pointer px-2 py-1 rounded" href="#">الفرق</a>
+<a class="font-label-sm text-label-sm bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold transition-colors duration-200 cursor-pointer active:scale-95" href="#">سجّل الآن</a>
+</nav>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 hero-pattern"></div>
+<div class="container mx-auto px-gutter grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="text-right space-y-6">
+<span class="inline-block px-4 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full font-label-sm text-label-sm">منصة القادة الصاعدين</span>
+<h2 class="font-h1 text-h1 text-on-surface leading-tight">صناعة جيل <br/><span class="text-primary">يقود المستقبل</span> بالمعرفة والقيم</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">نحن نؤمن بأن التغيير الحقيقي يبدأ من صياغة العقول. أكاديمية جيل ترجيح هي الحاضنة الأولى لتطوير الكفاءات القيادية برؤية أكاديمية حديثة.</p>
+<div class="flex  gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-h3 text-lg shadow-lg hover:shadow-xl transition-all active:scale-95">سجّل الآن</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-h3 text-lg hover:bg-primary-fixed-dim transition-all">اكتشف برامجنا</button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-gradient-to-tr from-primary to-secondary-container rounded-[2rem] rotate-3 absolute inset-0 opacity-10"></div>
+<img alt="Academic Leadership" class="rounded-[2rem] shadow-2xl relative z-10 w-full h-[500px] object-cover" data-alt="A focused group of diverse young scholars and future leaders collaborating in a high-end, modern academic library setting. The lighting is warm and intellectual, with sunlight streaming through large geometric windows. The color palette is dominated by rich orange accents and clean whites, reflecting the Jiltarjih Academy brand identity. Professional, inspiring, and sophisticated visual style with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDutIG6FNO0fSzEfld8BfCQT9jvlkDAm-e82EoCFw93U9ANASgETPiOVNW-ktPx180sxBa5XqL4ed2EwKs1LYegskFsWssFBb9GUt81IBmerC7E2FL0YS0aGCajojzLxyMDno5aj_Rqz346-y0JFdK5ByKAT9CsMGftQi7aOwcwOOHx2AYw8CE12zXFoI7GnXw_cb6bEowTPVkevM6GC6ZKQYLJgHXwLWAE1qncJ5ebmLIkxJS2bIBSdEF7v_IkZYGQCtxdA07-zkM"/>
+</div>
+</div>
+</section>
+<!-- Mission Section - Bento Style -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-gutter">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-h2 text-h2 text-on-surface">لماذا تختار أكاديميتنا؟</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">نرتكز على ثلاثة أسس جوهرية تضمن للطالب تجربة تعليمية فريدة تدمج بين الجانب النظري والتطبيقي.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="p-8 bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h3 class="font-h3 text-lg mb-4">تميز أكاديمي</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">مناهج تعليمية صممت على يد خبراء لضمان أعلى مستويات الجودة المعرفية والمهارية.</p>
+</div>
+<!-- Card 2 -->
+<div class="p-8 bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<h3 class="font-h3 text-lg mb-4">بيئة تطبيقية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">مشاريع واقعية وفرق عمل تحاكي سوق العمل لترسيخ المفاهيم المكتسبة ميدانياً.</p>
+</div>
+<!-- Card 3 -->
+<div class="p-8 bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-primary-fixed rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary-container" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="font-h3 text-lg mb-4">شبكة قيادية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">اتصال مباشر مع نخبة من القادة والموجهين لبناء مسار مهني استثنائي ومستدام.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="container mx-auto px-gutter">
+<div class="flex  justify-between items-end mb-12">
+<div class="text-right">
+<h2 class="font-h2 text-h2 text-on-surface">أبرز مشاريعنا</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">نماذج من ابتكارات طلابنا التي تحولت إلى واقع ملموس</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:underline">
+                        عرض الكل
+                        <span class="material-symbols-outlined">chevron_left</span>
+</button>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="md:col-span-2 row-span-2 group relative overflow-hidden rounded-3xl shadow-xl">
+<img alt="Collaborative Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A dynamic high-angle shot of a creative workspace where team members are pinning architectural diagrams and UI wireframes onto a large wall. The environment is a bright, modern studio with warm wood textures and academy orange office accents. The lighting is crisp and energetic, symbolizing innovation and collaboration at Jiltarjih Academy. Modern minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsst4rwrts7d3EAaW0gCir5uA9DzSmFyhoiBdA5wlNHo91NylXb3trD9gADBhoYTkMV2SstF8pt6w290xCxbUPftg0FA-bdJEzcFl1CHRH4B_BgasRGj5wn9TEh9pQ7uuJkeQZmEa0KKrtpXjujT7i87ut2uB9hu8TKGs4RURa4c1g2i5NPhPiQz4qpWPSLiUOlwSS4iyKnQVpehS2beQYdlju9b3hUzAs620zxYkH2lXWqhArZp2Nwc0XaN4T1MJZqjrMcInnNMw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
+<span class="bg-primary px-3 py-1 rounded-full text-label-sm w-fit mb-3">مشروع العام</span>
+<h3 class="font-h3 text-lg mb-2">منصة الابتكار المجتمعي</h3>
+<p class="font-body-md opacity-90">حلول تقنية تهدف لربط المبدعين بفرص التمويل التنموي.</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl shadow-lg h-64">
+<img alt="Data Analysis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close-up of a high-tech digital dashboard displayed on multiple sleek monitors in a dimly lit, professional control room. The UI features complex data visualizations in vibrant orange and soft white. The atmosphere is professional, data-driven, and sophisticated, reflecting the academic rigour of the academy projects. Tech-focused modern style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-SZ6-dTRyvgMu3ezK5dnhE_FIGElLZmFkU_njF65LDIpJWMqYUlIRwbilSW06jDMSz2_wD1h1YrTiMMd_tR8wPVtnFKlfc75wqFIOlS0EFMwSV_kBm2ag_SC89kcWhGMGa9IIy0z3wC2H0VE4vN2yfUEFcBEEDyfVQuS-fgJzxYrm12dDp47IikfgfI3dAIRLraQDr8EQjE6tFTpYVeKCBGggM-c2XlrECYTIh96lt00VdHphujm5Ms-Gv9JVV6HzBFGR7OM9kh0"/>
+<div class="absolute inset-0 bg-black/40 flex items-end p-6 text-white">
+<h4 class="font-h3 text-lg">نظام تحليل البيانات</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl shadow-lg h-64">
+<img alt="Education Tech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern classroom setting with students using high-end tablets and interactive displays. The room is decorated with minimal Islamic geometric patterns on the glass partitions. Soft, diffused lighting creates a comfortable yet productive learning environment. The branding colors of academy orange are subtly integrated into the furniture and digital interfaces. Contemporary educational aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJMcXoKk2_LvmnQlzpSjCe7YxwNQi_ogvDyUk_dphBrdjXQ_pVJWxbJhoi0Lb2WtKv0juJaKOJp9htZM7vi4mMrE9FTo5eqn2xkA3wCTvOZ3ji9b5aMjNyoXITwud4HjxWSzCO8NmN0lKlYXgEE6stK7sWEZY82h2sWlwucMndx-KDO80IOygOme7okYz6qO06EN-An-N4qWAQSTePT-5CctYN4muriUKFsj3Fpn0mNFAChadq9le7a48LCW0itEsCsEIvATpXjXc"/>
+<div class="absolute inset-0 bg-black/40 flex items-end p-6 text-white">
+<h4 class="font-h3 text-lg">تطبيقات التعليم الذكي</h4>
+</div>
+</div>
+<div class="md:col-span-2 group relative overflow-hidden rounded-3xl shadow-lg h-64">
+<img alt="Team Building" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide shot of an outdoor leadership retreat where young professionals are engaged in a team-building exercise on a pristine, modern campus terrace. The background features sleek architecture and lush greenery. The mood is inspiring, collaborative, and fresh. High-key lighting with a focus on vibrant orange and natural tones. Premium corporate lifestyle photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEFgcCYIPwgcHX0i5ZlFgRwHYpHHo6a7ld4iVm4TyRKiZLKfA5YS23zVH18F3wnTmmg4x4cqhA8q4NQ2gh85dZtKXYwRUbhCHWf9gY58Ai86uR70Jv5HOw9yui4dTrFC0Jk5HAnet_cu6j342miX0DHpqwt5cG5cVWpy7BRUGY2ijMZD7o6IarLOxYtmO1jhNZwur2q4iqmTvbMsU3XxkOGFFjMnETuNZMuJXDsptE4aZN4Yfnxf_j1QUyQZy6elzvEMcWDo__FTM"/>
+<div class="absolute inset-0 bg-black/40 flex items-end p-6 text-white">
+<h4 class="font-h3 text-lg">مبادرة القادة الشباب</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Form Section -->
+<section class="py-24 bg-surface" id="registration">
+<div class="container mx-auto px-gutter max-w-container-max">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col md:">
+<div class="md:w-1/2 p-12 md:p-20 text-right space-y-8">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-4">ابدأ رحلتك معنا اليوم</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">املأ النموذج أدناه للانضمام إلى الدفعة القادمة من القادة. سنتواصل معك فور مراجعة طلبك.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface">الاسم الأول</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="أحمد" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface">اسم العائلة</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="الغامدي" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface">البريد الإلكتروني</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-left" placeholder="example@jiltarjih.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface">الاهتمام الرئيسي</label>
+<select class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option>القيادة الإدارية</option>
+<option>إدارة المشاريع</option>
+<option>الابتكار والريادة</option>
+<option>التواصل الفعال</option>
+</select>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-h3 text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-[0.98]">إرسال طلب الانضمام</button>
+</form>
+</div>
+<div class="md:w-1/2 relative min-h-[400px]">
+<img alt="Student Success" class="absolute inset-0 w-full h-full object-cover" data-alt="A premium close-up of a student signing a formal document with a high-end fountain pen. The desk is organized with a leather-bound notebook, a sleek modern laptop, and a cup of coffee. The lighting is cinematic, highlighting the texture of the paper and the professionalism of the setting. The color palette includes warm wood tones, crisp white, and subtle orange accents. High-end lifestyle photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN4Q7K5fjD7WA0ff531lgE67Kdw6mrz0fb5XQVjZFb_ZFCmp_yp1BnOSRxKQOXepqFqtcqGDHL3Q5aI1CtY4rpwutIpMk3xx-6sZgj0vbwdf_qmpqQ4KOJ4tAfkZKJepBftj9OrGLg35Nhx52WYUMjV8ezR-OkidhPntlRak5uNbI2UtXQeyNR_93s8ZX_0xC7Bn9DLzVRB0gnCJW3fhO6Hq984IwFhp64NJExRxrUbsn_OejJ1BdQHC2J92aF3nFnKd2kZf9lmLw"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-white text-right">
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-xl font-bold mb-4 italic">"كان انضمامي للأكاديمية هو المنعطف الأهم في مسيرتي المهنية والشخصية."</p>
+<div class="flex  items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed"></div>
+<div>
+<p class="font-bold">خالد محمد</p>
+<p class="text-sm opacity-80">خريج دفعة ٢٠٢٣</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-auto">
+<div class="container mx-auto px-margin py-12 flex flex-col items-center gap-8 text-center">
+<h3 class="font-h3 text-lg text-primary">أكاديمية جيل ترجيح</h3>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-tertiary-container transition-colors cursor-pointer" href="#">عن الأكاديمية</a>
+<a class="font-body-md text-on-surface-variant hover:text-tertiary-container transition-colors cursor-pointer" href="#">سياسة الخصوصية</a>
+<a class="font-body-md text-on-surface-variant hover:text-tertiary-container transition-colors cursor-pointer" href="#">اتصل بنا</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">group</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© ٢٠٢٤ أكاديمية جيل ترجيح. جميع الحقوق محفوظة.</p>
+</div>
+</footer>
+<!-- Navigation Drawer (Mobile Only Overlay Logic - Static representation) -->
+<div class="hidden h-full w-80 fixed right-0 top-0 bg-surface-container shadow-xl z-[60] rounded-l-xl p-margin text-right flex flex-col gap-2" id="drawer">
+<h3 class="font-h3 text-lg text-primary mb-6">القائمة الرئيسية</h3>
+<div class="flex  items-center gap-4 bg-secondary-fixed text-on-secondary-fixed-variant p-4 rounded-lg">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-md">الرئيسية</span>
+</div>
+<div class="flex  items-center gap-4 text-on-surface-variant p-4 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-body-md">المشاريع</span>
+</div>
+<div class="flex  items-center gap-4 text-on-surface-variant p-4 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-body-md">الفرق</span>
+</div>
+<div class="flex  items-center gap-4 text-on-surface-variant p-4 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">how_to_reg</span>
+<span class="font-body-md">التسجيل</span>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>أكاديمية جيل ترجيح - الصفحة الرئيسية</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffdbca",
+                    "background": "#fcf9f8",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-tint": "#9e4300",
+                    "on-tertiary-fixed-variant": "#7e2c00",
+                    "tertiary-container": "#fb620e",
+                    "on-secondary-fixed-variant": "#773300",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "on-primary-container": "#4e1d00",
+                    "tertiary": "#a53c00",
+                    "primary-fixed-dim": "#ffb691",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary": "#9e4300",
+                    "on-tertiary-container": "#521a00",
+                    "on-error": "#ffffff",
+                    "primary-container": "#f26a00",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed": "#ffdbce",
+                    "on-tertiary-fixed": "#370e00",
+                    "outline": "#8d7164",
+                    "primary-fixed": "#ffdbcb",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#1c1b1b",
+                    "on-surface-variant": "#594236",
+                    "surface": "#fcf9f8",
+                    "secondary-fixed-dim": "#ffb68e",
+                    "surface-container": "#f0edec",
+                    "secondary-container": "#ff7a1b",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-variant": "#e5e2e1",
+                    "secondary": "#9c4500",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#ffb691",
+                    "on-primary-fixed": "#341100",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#783100",
+                    "surface-container-high": "#ebe7e7",
+                    "inverse-surface": "#313030",
+                    "on-secondary-fixed": "#331200",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb598",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e1c0b1",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#5e2700"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "container-max": "1280px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Tajawal"],
+                    "h3": ["Cairo"],
+                    "h2": ["Cairo"],
+                    "h1": ["Cairo"],
+                    "label-sm": ["Tajawal"],
+                    "body-md": ["Tajawal"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pattern-bg {
+            background-image: radial-gradient(var(--tw-colors-outline-variant) 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.15;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #fcf9f8 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 sticky z-50 transition-colors duration-200 cursor-pointer active:scale-95">
+<div class="flex  justify-between items-center w-full px-gutter h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="menu">menu</span>
+<h1 class="font-h3 text-lg font-bold text-primary dark:text-inverse-primary">أكاديمية جيل ترجيح</h1>
+</div>
+<div class="hidden md:flex  items-center gap-8">
+<a class="text-primary dark:text-inverse-primary font-bold font-label-sm text-label-sm" href="#">الرئيسية</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-primary-fixed-dim dark:hover:bg-primary-fixed font-label-sm text-label-sm px-2 py-1 rounded transition-colors" href="#">المشاريع</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:bg-primary-fixed-dim dark:hover:bg-primary-fixed font-label-sm text-label-sm px-2 py-1 rounded transition-colors" href="#">الفرق</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-opacity">سجّل الآن</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[707px] flex items-center justify-center overflow-hidden hero-gradient">
+<div class="absolute inset-0 pattern-bg"></div>
+<!-- Decorative Orange Bands -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+<div class="container mx-auto px-gutter relative z-10 text-center max-w-4xl">
+<h2 class="font-h1 text-h1 text-primary mb-6 leading-tight">أكاديمية جيل الترجيح للتأهيل القيادي</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                    نحن هنا لصناعة المستقبل عبر تمكين الشباب وتأهيل جيل من القادة القادرين على إحداث تغيير إيجابي ومستدام في مجتمعاتهم من خلال برامج أكاديمية وعملية مكثفة.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-xl font-h3 text-lg shadow-lg hover:shadow-xl transition-all" href="#register">سجّل الآن</a>
+<a class="border-2 border-primary text-primary px-10 py-4 rounded-xl font-h3 text-lg hover:bg-primary-fixed-dim transition-all" href="#projects">اكتشف المشاريع</a>
+</div>
+</div>
+<!-- Hero Image Simulation -->
+<div class="absolute bottom-0 right-0 w-full h-1/4 opacity-20 pointer-events-none">
+<div class="w-full h-full bg-gradient-to-t from-primary-fixed to-transparent"></div>
+</div>
+</section>
+<!-- Mission Section -->
+<section class="py-24 bg-white">
+<div class="container mx-auto px-gutter">
+<div class="text-center mb-16">
+<h3 class="font-h2 text-h2 text-primary mb-4">رسالتنا</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        تمكين الشباب العربي وتزويدهم بالأدوات القيادية والقيم الأخلاقية اللازمة للمساهمة الفعالة في نهضة الأمة.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value Card 1 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 bg-secondary-fixed text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl" data-icon="star" data-weight="fill">star</span>
+</div>
+<h4 class="font-h3 text-lg text-primary mb-3">القيادة</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">غرس مفاهيم القيادة الرشيدة والقدرة على اتخاذ القرار الاستراتيجي في ظروف متغيرة.</p>
+</div>
+<!-- Value Card 2 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 bg-secondary-fixed text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl" data-icon="groups" data-weight="fill">groups</span>
+</div>
+<h4 class="font-h3 text-lg text-primary mb-3">العمل الجماعي</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">تعزيز روح التعاون والتكاتف لبناء فرق عمل متناغمة تحقق الأهداف المشتركة.</p>
+</div>
+<!-- Value Card 3 -->
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow text-center">
+<div class="w-16 h-16 bg-secondary-fixed text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-4xl" data-icon="volunteer_activism" data-weight="fill">volunteer_activism</span>
+</div>
+<h4 class="font-h3 text-lg text-primary mb-3">خدمة المجتمع</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">توجيه الطاقات الشبابية نحو مبادرات تطوعية تخدم قضايا المجتمع وتدعم استقراره.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects Section -->
+<section class="py-24 bg-surface-container-lowest relative" id="projects">
+<div class="container mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h3 class="font-h2 text-h2 text-primary mb-2">المشاريع المميزة</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">نماذج من المبادرات التي أطلقتها الأكاديمية</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 mt-4 md:mt-0" href="#">
+                        عرض جميع المشاريع <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant shadow-sm flex flex-col group">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional aerial view of a diverse group of young leaders sitting around a circular wooden table in a high-tech academic conference room. The atmosphere is focused and collaborative, with natural sunlight streaming through large windows. The interior follows a modern academic aesthetic with orange and warm white accents, conveying a sense of prestige and innovative problem-solving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASbAwebULBLUvDvN_b2FmY0d0kX00fFee5yyrzBvJYPC4ze4YCnbtVNc6a7NWmWg3hc3z1mW9HH1tGiOFzkur1FG_50235NqYs43ZZLhjfcpwsz5KP1ugwTmzr04lzt8_E5IuIsSQ9NYNy-bowA1cR9iAczL-lYiOlTcVfxZAX8MUdY9IWyiBfwzOlFxh3KlMgTdqqgxWde1DwAp64ReZxnGaXdqWuXHe31RF5uHGcEyGzI-fFDxXQL6yb9JbuCmQ3lmTkIVCpM1w"/>
+<span class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label-sm text-label-sm">متاح للتسجيل</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-h3 text-lg text-primary mb-3">برنامج القائد الصغير</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">تطوير المهارات القيادية للأطفال والناشئين من خلال أنشطة تفاعلية وألعاب ذكاء.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant flex justify-between items-center text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined text-sm" data-icon="groups">groups</span> ١٢ فريق</span>
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> ٣ أشهر</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant shadow-sm flex flex-col group">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of students collaborating on a digital project in a bright, contemporary workspace. High-quality laptops and architectural models are visible on the desks. The lighting is soft and professional, highlighting a mix of warm wood textures and vibrant orange branding elements. The setting evokes a high-tier educational environment dedicated to innovation and modern leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfx1ri4UzniAqpAAzn3XouTQR_lnzs_ZnpNsHT1ko7socqo4dJUSpmpWBNGfkpGYhijLyQVYTHuVKdZwjBZVZag7lnVyju7dzntKi0u7NvwQZeFxZsoGBSx6TpLgNTrb14AWfJMJ_MTokV6ObaM2qd-tfdb8E_7_2utV-GITAIgVsthJVN8SyIzQAjEtdQGicmIyPa6thO9qdXFMNJrf-9hw3Q7woYQMzyLM7cfCmOZ3OslPdCVEuHokzk0SRknMFZ1jOCp8dek4o"/>
+<span class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label-sm text-label-sm">متاح للتسجيل</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-h3 text-lg text-primary mb-3">مبادرة بناء الوطن</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">تمكين الشباب من طرح حلول مبتكرة للتحديات المجتمعية الراهنة في بيئة ريادية.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant flex justify-between items-center text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined text-sm" data-icon="groups">groups</span> ٨ فرق</span>
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> ٦ أشهر</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-outline-variant shadow-sm flex flex-col group">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated presentation in a modern university lecture hall with an orange accent wall. A young professional is presenting a digital deck to an engaged audience of scholars. The mood is inspirational and academic, featuring high-contrast lighting and a structured, professional layout that mirrors corporate excellence and trustworthiness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrRgod6nRFa2SuiaX5JnkpanN7Dss1rZ82YAnGwAuEMHMosCIuGmitzcIbgEy7-TNsFqF5Qy-mzHiMG9upSU0-x9OdYaIUXAtMKTTVUZLHLCgCQr2L0x5qRAp5MxVVzdIVVugzAjILpSuCmYWQ0Bu8A1_ZX0azPgntOhp_DuPnMkcTxxRQyvd5obI3Tt83bk-e62xB89Qhk_jIhk_sXnd5DxcT4ZWokTA71pn7zdHPC7f7nh51r3SDBM9eR4CXJGr5z5eGF4Nsmgs"/>
+<span class="absolute top-4 right-4 bg-surface-dim text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">مكتمل</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-h3 text-lg text-primary mb-3">معسكر القيادة الرقمية</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">دمج التقنيات الحديثة مع المهارات القيادية لمواكبة التحول الرقمي العالمي.</p>
+<div class="mt-auto pt-4 border-t border-outline-variant flex justify-between items-center text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined text-sm" data-icon="groups">groups</span> ١٥ فريق</span>
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span> ٤ أسابيع</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Teams Section -->
+<section class="py-24 bg-background">
+<div class="container mx-auto px-gutter">
+<div class="text-center mb-16">
+<h3 class="font-h2 text-h2 text-primary mb-4">أبرز الفرق</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">الفرق التي حققت تميزاً استثنائياً في مشاريعنا الأخيرة</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Team 1 -->
+<div class="bg-surface p-6 rounded-2xl border-l-4 border-primary shadow-sm hover:translate-x-[-8px] transition-transform">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<h5 class="font-h3 text-lg text-on-surface">فريق الرواد</h5>
+<p class="text-primary font-label-sm">مشروع القائد الصغير</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span>٥ أعضاء نشطين</span>
+</div>
+</div>
+<!-- Team 2 -->
+<div class="bg-surface p-6 rounded-2xl border-l-4 border-primary shadow-sm hover:translate-x-[-8px] transition-transform">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+</div>
+<div>
+<h5 class="font-h3 text-lg text-on-surface">فريق الإبداع</h5>
+<p class="text-primary font-label-sm">مبادرة بناء الوطن</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span>٨ أعضاء نشطين</span>
+</div>
+</div>
+<!-- Team 3 -->
+<div class="bg-surface p-6 rounded-2xl border-l-4 border-primary shadow-sm hover:translate-x-[-8px] transition-transform">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+</div>
+<div>
+<h5 class="font-h3 text-lg text-on-surface">فريق العزيمة</h5>
+<p class="text-primary font-label-sm">القيادة الرقمية</p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span>٦ أعضاء نشطين</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Registration Form Section -->
+<section class="py-24 bg-primary text-on-primary relative overflow-hidden" id="register">
+<div class="absolute inset-0 pattern-bg opacity-10"></div>
+<div class="container mx-auto px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h3 class="font-h1 text-h1 mb-6">انضم إلى الجيل القادم من القادة</h3>
+<p class="font-body-lg text-body-lg mb-8 opacity-90">
+                            فرصتك للتعلم، النمو، والتأثير تبدأ من هنا. املأ النموذج وسيتواصل معك فريقنا المختص لمتابعة إجراءات قبولك.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">شهادات معتمدة دولياً</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">إشراف من خبراء القيادة</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">فرص تشبيك مهني واسعة</span>
+</div>
+</div>
+</div>
+<div class="bg-white text-on-background p-8 rounded-3xl shadow-2xl">
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">الاسم الكامل</label>
+<input class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all" placeholder="أدخل اسمك الثلاثي" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">البريد الإلكتروني</label>
+<input class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all" placeholder="example@domain.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">رقم الهاتف</label>
+<input class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all" placeholder="+966 --- --- ---" type="tel"/>
+</div>
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">الدولة / المدينة</label>
+<input class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all" placeholder="مكان الإقامة الحالي" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">العمر</label>
+<input class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all" placeholder="مثلاً: ٢٢" type="number"/>
+</div>
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">المؤهل / الوظيفة</label>
+<input class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all" placeholder="الدرجة العلمية أو المسمى الوظيفي" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">المشروع المراد الانضمام إليه</label>
+<select class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all">
+<option>اختر مشروعاً</option>
+<option>برنامج القائد الصغير</option>
+<option>مبادرة بناء الوطن</option>
+<option>معسكر القيادة الرقمية</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm mb-2 text-on-surface-variant">لماذا تريد الانضمام إلينا؟</label>
+<textarea class="w-full bg-[#F4F4F2] border-outline-variant rounded-xl p-4 focus:ring-primary focus:border-primary transition-all" placeholder="اكتب نبذة مختصرة عن دوافعك" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-h3 py-4 rounded-xl hover:bg-primary transition-colors shadow-lg" type="submit">إرسال طلب التسجيل</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant dark:border-outline w-full mt-auto">
+<div class="flex flex-col items-center gap-8 p-margin w-full text-center max-w-container-max mx-auto">
+<div class="flex flex-col items-center gap-4">
+<h2 class="font-h3 text-lg text-primary font-bold">أكاديمية جيل الترجيح</h2>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant hover:text-tertiary-container transition-colors font-body-md text-body-md" href="#">عن الأكاديمية</a>
+<a class="text-on-surface-variant hover:text-tertiary-container transition-colors font-body-md text-body-md" href="#">سياسة الخصوصية</a>
+<a class="text-on-surface-variant hover:text-tertiary-container transition-colors font-body-md text-body-md" href="#">اتصل بنا</a>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© ٢٠٢٤ أكاديمية جيل ترجيح. جميع الحقوق محفوظة.</p>
+</div>
+</footer>
+</body></html>
