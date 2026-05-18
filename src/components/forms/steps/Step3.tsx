@@ -16,6 +16,7 @@ export function Step3({ data, set, errors }: StepProps) {
     <div className="space-y-5">
       <SectionTitle icon="psychology" title="الدافعية للانضمام" sub="دوافعك وتوقعاتك من هذه التجربة" />
       {QUESTIONS.map(q => (
+        
         <Field key={String(q.key)} label={q.label} required={q.required} error={errors[q.key] as string | undefined}>
           <Textarea
             value={data[q.key] as string}
