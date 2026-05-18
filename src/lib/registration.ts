@@ -8,8 +8,8 @@ export async function register(data: FullRegistrationFormData) {
   try {
     await appendRegistrationToGoogleSheets({ data, createdAt });
     return { ok: true as const, storage: "google_sheets" as const };
-  } catch {
-    // Google Sheets unavailable — fall through to local backup
+  } catch (err) {
+    console.error("[registration] Google Sheets failed, falling back to SQLite:", err);
   }
 
   try {
