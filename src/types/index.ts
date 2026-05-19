@@ -56,7 +56,11 @@ export type RegistrationFormData = {
 
 export type SkillLevel = "" | "weak" | "medium" | "good" | "excellent";
 
+export type RegistrationType = "team" | "project";
+
 export type FullRegistrationFormData = {
+  // Registration type (determines which path/sheet is used)
+  registrationType: RegistrationType;
   // Step 1 – personal
   fullName: string;
   age: string;
@@ -108,9 +112,11 @@ export type FullRegistrationFormData = {
   skillCommunication: SkillLevel;
   possessedSkills: string[];
   otherPossessedSkill: string;
-  // Step 5 – team selection
+  // Step 5 – selection (team path)
   selectedTeams: string[];
-  // Step 6 – per-team answers
+  // Step 5 – selection (project path)
+  selectedProjects: string[];
+  // Step 6 – per-team answers (team path only)
   teamAnswers: Record<string, Record<string, string | string[]>>;
   // Step 7 – conclusion
   selectionReason: string;

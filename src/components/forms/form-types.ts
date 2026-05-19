@@ -43,7 +43,7 @@ export const SKILL_ROWS: {
   { key: "skillCommunication",  label: "التواصل والإقناع" },
 ];
 
-export const STEPS = [
+export const TEAM_STEPS = [
   { id: 1, title: "البيانات الشخصية",    icon: "person"            },
   { id: 2, title: "الانخراط والتجربة",   icon: "volunteer_activism" },
   { id: 3, title: "الدافعية",            icon: "psychology"        },
@@ -53,7 +53,20 @@ export const STEPS = [
   { id: 7, title: "ختاماً",             icon: "check_circle"      },
 ];
 
+export const PROJECT_STEPS = [
+  { id: 1, title: "البيانات الشخصية",    icon: "person"            },
+  { id: 2, title: "الانخراط والتجربة",   icon: "volunteer_activism" },
+  { id: 3, title: "الدافعية",            icon: "psychology"        },
+  { id: 4, title: "المهارات والإدارة",   icon: "star"              },
+  { id: 5, title: "اختيار المشروع",      icon: "rocket_launch"     },
+  { id: 6, title: "ختاماً",             icon: "check_circle"      },
+];
+
+// kept for backward compat with StepPreamble (team default)
+export const STEPS = TEAM_STEPS;
+
 export const INITIAL: FullRegistrationFormData = {
+  registrationType: "team",
   fullName:"", age:"", educationLevel:"", specialty:"", job:"",
   wilaya:"", groupName:"", batch:"", phone:"", email:"",
   telegramLink:"", linkedinLink:"",
@@ -69,7 +82,7 @@ export const INITIAL: FullRegistrationFormData = {
   skillPlanning:"", skillTimeManagement:"", skillTeamwork:"",
   skillProblemSolving:"", skillLeadership:"", skillCommunication:"",
   possessedSkills:[], otherPossessedSkill:"",
-  selectedTeams:[],
+  selectedTeams:[], selectedProjects:[],
   teamAnswers:{},
   selectionReason:"", vision:"", additionalNotes:"",
 };

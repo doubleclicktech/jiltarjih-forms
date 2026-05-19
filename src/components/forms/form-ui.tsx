@@ -261,11 +261,11 @@ export function Divider({ label }: { label?: string }) {
 
 // ─── Step Progress ────────────────────────────────────────────────────────────
 
-export function StepProgress({ current }: { current: number }) {
+export function StepProgress({ current, steps = STEPS }: { current: number; steps?: typeof STEPS }) {
   return (
     <nav aria-label="مراحل الاستمارة" className="mb-8">
       <ol className="flex items-center justify-between gap-1">
-        {STEPS.map(step => {
+        {steps.map(step => {
           const done   = step.id < current;
           const active = step.id === current;
           return (

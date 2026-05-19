@@ -17,9 +17,16 @@ const VALID_TEAMS = [
   "doubleclick", "munazara", "funun", "safari", "qawim",
 ];
 
+const VALID_PROJECTS = [
+  "qawim", "kafa-mukhadarat", "jil-riyadhi", "shabab-tak", "badr",
+];
+
 const skillLevel = z.enum(["", "weak", "medium", "good", "excellent"]);
 
 export const registrationSchema = z.object({
+  // Registration type
+  registrationType: z.enum(["team", "project"]),
+
   // Step 1 – personal
   fullName: z.string().min(2, "الاسم الكامل مطلوب").max(100),
   age: z.string()
@@ -79,11 +86,17 @@ export const registrationSchema = z.object({
   possessedSkills: z.array(z.string().max(100)).optional().default([]),
   otherPossessedSkill: z.string().max(200).optional().default(""),
 
-  // Step 5 – team selection
+  // Step 5 – selection (team path)
   selectedTeams: z
     .array(z.string().refine((t) => VALID_TEAMS.includes(t), "فريق غير صالح"))
-    .min(1, "يجب اختيار فريق واحد على الأقل")
-    .max(VALID_TEAMS.length),
+    .optional()
+    .default([]),
+
+  // Step 5 – selection (project path)
+  selectedProjects: z
+    .array(z.string().refine((p) => VALID_PROJECTS.includes(p), "مشروع غير صالح"))
+    .optional()
+    .default([]),
 
   // Step 6 – per-team answers (free-form object, values validated by size)
   teamAnswers: z
@@ -101,6 +114,13 @@ export const registrationSchema = z.object({
   selectionReason: z.string().min(20, "يرجى الإجابة بتفصيل أكثر (20 حرفاً على الأقل)").max(2000),
   vision: z.string().max(2000).optional().default(""),
   additionalNotes: z.string().max(2000).optional().default(""),
+}).superRefine((data, ctx) => {
+  if (data.registrationType === "team" && data.selectedTeams.length === 0) {
+    ctx.addIssue({ code: "custom", path: ["selectedTeams"], message: "يجب اختيار فريق واحد على الأقل" });
+  }
+  if (data.registrationType === "project" && data.selectedProjects.length === 0) {
+    ctx.addIssue({ code: "custom", path: ["selectedProjects"], message: "يجب اختيار مشروع واحد على الأقل" });
+  }
 });
 
 export type ValidatedRegistrationData = z.infer<typeof registrationSchema>;
