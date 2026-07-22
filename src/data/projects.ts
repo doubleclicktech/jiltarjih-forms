@@ -4,6 +4,7 @@ import kafaMukhadarat from "./projects/kafa-mukhadarat.json";
 import jilRiyadhi from "./projects/jil-riyadhi.json";
 import shahabTak from "./projects/shabab-tak.json";
 import badr from "./projects/badr.json";
+import hasif from "./projects/hasif.json";
 
 export const projects: Project[] = [
   qawim,
@@ -11,4 +12,5 @@ export const projects: Project[] = [
   jilRiyadhi,
   shahabTak,
   badr,
+  hasif,
 ] as Project[];
