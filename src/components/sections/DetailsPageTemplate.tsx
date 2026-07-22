@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { ImageGallery } from "@/components/ui/ImageGallery";
 
 type QuickInfoRow = { label: string; value: string };
 
@@ -21,6 +22,8 @@ type Props = {
   mission: string;
   objectivesHeading: string;
   objectives: string[];
+  gallery?: string[];
+  galleryHeading?: string;
   // Sidebar
   quickInfoRows: QuickInfoRow[];
   // CTA
@@ -46,6 +49,8 @@ export function DetailsPageTemplate({
   mission,
   objectivesHeading,
   objectives,
+  gallery,
+  galleryHeading = "معرض الصور",
   quickInfoRows,
   ctaTitle,
   ctaText,
@@ -138,6 +143,14 @@ export function DetailsPageTemplate({
                 <p className="text-on-surface-variant leading-relaxed text-base">{mission}</p>
               </section>
             </div>
+
+            {/* Gallery */}
+            {gallery && gallery.length > 0 && (
+              <section className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-8 text-right">
+                <h2 className="font-h2 text-h2 mb-4">{galleryHeading}</h2>
+                <ImageGallery images={gallery} alt={title} />
+              </section>
+            )}
 
             {/* Objectives */}
             <section className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-8 text-right">

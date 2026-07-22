@@ -63,6 +63,7 @@ export default async function TeamDetailsPage({
       mission={team.mission}
       objectivesHeading="مهام الفريق وأهدافه"
       objectives={team.objectives}
+      gallery={team.gallery}
       quickInfoRows={quickInfoRows}
       ctaTitle="هل أنت مستعد للانضمام؟"
       ctaText="سجّل الآن وسنساعدك على الالتحاق بالفريق الأنسب ضمن بيئة أكاديمية تجمع بين الأصالة والمعاصرة."
