@@ -1,0 +1,9 @@
+{
+  "id": "intellectual",
+  "slug": "intellectual",
+  "name": "المسار الفكري والمعرفي",
+  "icon": "lightbulb",
+  "description": "يهتم بإنتاج المعرفة، وتنمية التفكير النقدي، والبحث والقراءة، وصناعة المحتوى الثقافي والفكري الذي يعزز الوعي الحضاري.",
+  "teamSlugs": ["fikra", "tadrib", "munazara"],
+  "projectSlugs": ["hasif"]
+}

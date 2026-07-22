@@ -1,0 +1,9 @@
+{
+  "id": "literary-arts",
+  "slug": "literary-arts",
+  "name": "المسار الأدبي والفني",
+  "icon": "palette",
+  "description": "يعنى برعاية المواهب الأدبية والفنية، وتطوير مهارات الكتابة والإلقاء والرسم والتصوير وسائر الفنون الهادفة لخدمة الرسالة والقيم.",
+  "teamSlugs": ["difaf", "funun"],
+  "projectSlugs": []
+}

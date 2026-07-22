@@ -1,0 +1,9 @@
+{
+  "id": "community-service",
+  "slug": "community-service",
+  "name": "المسار المجتمعي والخدمي",
+  "icon": "volunteer_activism",
+  "description": "يعنى بخدمة المجتمع، عن طريق فكرة الحملات وتنظيم المبادرات التطوعية، والعمل الخيري، والمشاريع التنموية، وتعزيز المسؤولية المجتمعية والتكافل.",
+  "teamSlugs": ["tibbi", "safari", "events", "campaigns"],
+  "projectSlugs": ["kafa-mukhadarat", "jil-riyadhi", "badr"]
+}

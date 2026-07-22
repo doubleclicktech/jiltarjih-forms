@@ -40,6 +40,17 @@ export type Team = {
   leadName?: string;
   membersCount?: number;
   image?: string;
+  gallery?: string[];
+};
+
+export type Track = {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  icon: string;
+  teamSlugs: string[];
+  projectSlugs: string[];
 };
 
 export type RegistrationFormData = {
@@ -62,6 +73,7 @@ export type FullRegistrationFormData = {
   // Registration type (determines which path/sheet is used)
   registrationType: RegistrationType;
   // Step 1 – personal
+  registrationNumber: string;
   fullName: string;
   age: string;
   educationLevel: string;
