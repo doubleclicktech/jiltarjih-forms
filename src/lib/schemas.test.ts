@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { registrationSchema } from "./schemas";
 
 const validBase = {
+  registrationNumber: "12345",
   fullName: "عبد الرحمن بن خلدون",
   age: "25",
   educationLevel: "ليسانس",

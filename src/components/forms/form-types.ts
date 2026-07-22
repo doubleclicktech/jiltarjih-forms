@@ -45,10 +45,10 @@ export const SKILL_ROWS: {
 
 export const TEAM_STEPS = [
   { id: 1, title: "البيانات الشخصية",    icon: "person"            },
-  { id: 2, title: "الانخراط والتجربة",   icon: "volunteer_activism" },
-  { id: 3, title: "الدافعية",            icon: "psychology"        },
-  { id: 4, title: "المهارات والإدارة",   icon: "star"              },
-  { id: 5, title: "اختيار الفريق",       icon: "groups"            },
+  { id: 2, title: "اختيار الفريق",       icon: "groups"            },
+  { id: 3, title: "الانخراط والتجربة",   icon: "volunteer_activism" },
+  { id: 4, title: "الدافعية",            icon: "psychology"        },
+  { id: 5, title: "المهارات والإدارة",   icon: "star"              },
   { id: 6, title: "أسئلة تخصصية",       icon: "quiz"              },
   { id: 7, title: "ختاماً",             icon: "check_circle"      },
 ];
@@ -67,6 +67,7 @@ export const STEPS = TEAM_STEPS;
 
 export const INITIAL: FullRegistrationFormData = {
   registrationType: "team",
+  registrationNumber:"",
   fullName:"", age:"", educationLevel:"", specialty:"", job:"",
   wilaya:"", groupName:"", batch:"", phone:"", email:"",
   telegramLink:"", linkedinLink:"",

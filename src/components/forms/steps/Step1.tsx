@@ -9,6 +9,10 @@ export function Step1({ data, set, errors }: StepProps) {
       <SectionTitle icon="person" title="المعلومات الشخصية" sub="البيانات الأساسية للتواصل والتعرف عليك" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <Field label="رقم التسجيل" required error={errors.registrationNumber}>
+          <TextInput value={data.registrationNumber} onChange={v => set("registrationNumber", v)} placeholder="رقم تسجيلك في الأكاديمية" required hasError={!!errors.registrationNumber} />
+        </Field>
+
         <Field label="الاسم الكامل" required error={errors.fullName}>
           <TextInput value={data.fullName} onChange={v => set("fullName", v)} placeholder="اكتب اسمك الكامل" required hasError={!!errors.fullName} />
         </Field>

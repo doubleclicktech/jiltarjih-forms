@@ -3,6 +3,7 @@ import type { FullRegistrationFormData, RegistrationType } from "@/types";
 const FIELD_LABELS: Record<keyof FullRegistrationFormData | "createdAt", string> = {
   createdAt:                    "تاريخ التسجيل",
   registrationType:             "نوع التسجيل",
+  registrationNumber:           "رقم التسجيل",
   fullName:                     "الاسم الكامل",
   age:                          "العمر",
   educationLevel:               "المستوى التعليمي",

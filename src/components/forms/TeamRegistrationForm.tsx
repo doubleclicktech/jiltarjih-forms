@@ -149,10 +149,10 @@ export function TeamRegistrationForm({ onBack }: { onBack: () => void }) {
       <div>
         {step === 0 && <StepPreamble onStart={goNext} type="team" />}
         {step === 1 && <Step1 {...stepProps} />}
-        {step === 2 && <Step2 {...stepProps} />}
-        {step === 3 && <Step3 {...stepProps} />}
-        {step === 4 && <Step4 {...stepProps} />}
-        {step === 5 && <Step5 {...stepProps} />}
+        {step === 2 && <Step5 {...stepProps} />}
+        {step === 3 && <Step2 {...stepProps} />}
+        {step === 4 && <Step3 {...stepProps} />}
+        {step === 5 && <Step4 {...stepProps} />}
         {step === 6 && <Step6 {...stepProps} />}
         {step === 7 && <Step7 {...stepProps} />}
       </div>

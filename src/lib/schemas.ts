@@ -15,10 +15,11 @@ const VALID_WILAYAS = [
 const VALID_TEAMS = [
   "fikra", "quran", "difaf", "tadrib", "tibbi",
   "doubleclick", "munazara", "funun", "safari", "qawim",
+  "wai", "events", "campaigns", "content", "design", "marketing",
 ];
 
 const VALID_PROJECTS = [
-  "qawim", "kafa-mukhadarat", "jil-riyadhi", "shabab-tak", "badr",
+  "qawim", "kafa-mukhadarat", "jil-riyadhi", "shabab-tak", "badr", "hasif",
 ];
 
 const skillLevel = z.enum(["", "weak", "medium", "good", "excellent"]);
@@ -28,6 +29,7 @@ export const registrationSchema = z.object({
   registrationType: z.enum(["team", "project"]),
 
   // Step 1 – personal
+  registrationNumber: z.string().min(1, "رقم التسجيل مطلوب").max(50),
   fullName: z.string().min(2, "الاسم الكامل مطلوب").max(100),
   age: z.string()
     .regex(/^\d{1,2}$/, "العمر غير صالح")
