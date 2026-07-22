@@ -19,9 +19,9 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  title: "أكاديمية جيل ترجيح",
+  title: "منصة منارة | مؤسسات وأثر",
   description:
-    "بوابة أكاديمية جيل ترجيح للتأهيل القيادي والمشاريع والفرق والتسجيل.",
+    "بوّابة المشاريع وفرق العمل في أكاديمية جيل الترجيح، ترافق المشاريع من النواة الأولى إلى النضج والأثر.",
 };
 
 export default function RootLayout({
@@ -39,12 +39,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body
-        className={`${cairo.variable} ${tajawal.variable} relative antialiased font-body-md text-body-md`}
-      >
+      <body className={`${cairo.variable} ${tajawal.variable} relative antialiased font-body-md text-body-md`}>
         <div className="relative min-h-screen flex flex-col bg-background text-on-surface">
           <Header />
-          <main className="pt-16 flex-1">{children}</main>
+          <main className="pt-20 flex-1">{children}</main>
           <Footer />
         </div>
       </body>
