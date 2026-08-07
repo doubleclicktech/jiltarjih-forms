@@ -22,3 +22,11 @@ export const tracks: Track[] = [
   intellectual,
   palestine,
 ] as Track[];
+
+export function getTrackNameForTeam(teamSlug: string): string | undefined {
+  return tracks.find(t => t.teamSlugs.includes(teamSlug))?.name;
+}
+
+export function getTrackNameForProject(projectSlug: string): string | undefined {
+  return tracks.find(t => t.projectSlugs.includes(projectSlug))?.name;
+}

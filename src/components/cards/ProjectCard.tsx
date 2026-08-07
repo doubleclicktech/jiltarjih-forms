@@ -1,8 +1,10 @@
 import Link from "next/link";
 import type { Project } from "@/types";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { getTrackNameForProject } from "@/data/tracks";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const trackName = getTrackNameForProject(project.slug) ?? project.category;
   return (
     <div className="group bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col">
       <div className="p-6 flex flex-col flex-1 text-right">
@@ -18,7 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
             </div>
             <div>
               <h3 className="font-h3 text-lg text-on-surface mb-1">{project.title}</h3>
-              <p className="text-label-sm text-on-surface-variant">{project.category}</p>
+              <p className="text-label-sm text-on-surface-variant">{trackName}</p>
             </div>
           </div>
           <StatusBadge status={project.status} />

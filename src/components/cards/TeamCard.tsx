@@ -1,9 +1,11 @@
 import Link from "next/link";
 import type { Team } from "@/types";
 import { cn } from "@/lib/utils";
+import { getTrackNameForTeam } from "@/data/tracks";
 
 export function TeamCard({ team }: { team: Team }) {
   const available = team.availability === "available";
+  const trackName = getTrackNameForTeam(team.slug) ?? team.category;
 
   return (
     <div className="group bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col">
@@ -20,7 +22,7 @@ export function TeamCard({ team }: { team: Team }) {
             </div>
             <div>
               <h3 className="font-h3 text-lg text-on-surface mb-1">{team.name}</h3>
-              <p className="text-label-sm text-on-surface-variant">{team.category}</p>
+              <p className="text-label-sm text-on-surface-variant">{trackName}</p>
             </div>
           </div>
           <span
