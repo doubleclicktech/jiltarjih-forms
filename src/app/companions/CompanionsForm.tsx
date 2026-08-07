@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
+import { teams } from "@/data/teams";
+import { projects } from "@/data/projects";
 
 const WILAYAS = [
   "أدرار", "الشلف", "الأغواط", "أم البواقي", "باتنة", "بجاية", "بسكرة", "بشار", "البليدة", "البويرة",
@@ -42,16 +44,10 @@ const GENDERS = ["ذكر", "انثى"];
 
 const STAGES = ["التنشئة", "ريادي", "تمكين", "قيادي"];
 
-const TEAMS = [
-  "فريق بادر لإدارة الحملات",
-  "فريق مقاوم لدعم القضية الفلسطينية",
-  "فريق دوبل كليك التقني",
-  "فريق سفاري للرحلات والخرجات السياحية",
-  "فريق الفنون",
-  "فريق المناظرات",
-  "رابطة ضفاف الأدبية",
-  "فريق التكوين السياسي",
-];
+// Derived from the live teams/projects data so every team and project is
+// selectable and stays in sync automatically (renames, additions, removals).
+const TEAM_OPTIONS = teams.map(t => t.name);
+const PROJECT_OPTIONS = projects.map(p => p.title);
 
 const INITIAL = {
   fullName: "",
@@ -345,8 +341,17 @@ export function CompanionsForm() {
         </div>
       </Section>
 
-      <Section number="6" title="الفرق التي ترغب في مرافقتها">
-        <CheckboxGroup options={TEAMS} value={data.selectedTeams} onToggle={item => toggleArray("selectedTeams", item)} error={errors.selectedTeams} />
+      <Section number="6" title="الفرق والمشاريع التي ترغب في مرافقتها">
+        <div className="space-y-5">
+          <div>
+            <p className="mb-2 text-sm font-semibold text-on-surface-variant">الفرق التخصصية</p>
+            <CheckboxGroup options={TEAM_OPTIONS} value={data.selectedTeams} onToggle={item => toggleArray("selectedTeams", item)} error={errors.selectedTeams} />
+          </div>
+          <div>
+            <p className="mb-2 text-sm font-semibold text-on-surface-variant">المشاريع</p>
+            <CheckboxGroup options={PROJECT_OPTIONS} value={data.selectedTeams} onToggle={item => toggleArray("selectedTeams", item)} />
+          </div>
+        </div>
       </Section>
 
       <Section number="7" title="الخبرة حسب الفرق المختارة">
