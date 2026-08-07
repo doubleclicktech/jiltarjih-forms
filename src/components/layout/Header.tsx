@@ -13,6 +13,7 @@ const nav = [
   { href: "/projects", label: "المشاريع", icon: "account_tree" },
   { href: "/teams", label: "فرق العمل", icon: "groups" },
   { href: "/companions", label: "المرافقون", icon: "diversity_3" },
+  { href: "/contact", label: "تواصل معنا", icon: "mail" },
 ] as const;
 
 export function Header({ className }: { className?: string }) {
