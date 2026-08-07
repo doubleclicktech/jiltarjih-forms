@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 const nav = [
   { href: "/", label: "الرئيسة", icon: "home" },
+  { href: "/tracks", label: "المسارات", icon: "alt_route" },
   { href: "/projects", label: "المشاريع", icon: "account_tree" },
   { href: "/teams", label: "فرق العمل", icon: "groups" },
   { href: "/companions", label: "المرافقون", icon: "diversity_3" },
