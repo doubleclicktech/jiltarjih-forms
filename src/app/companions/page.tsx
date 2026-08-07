@@ -4,7 +4,7 @@ import { CompanionsForm } from "./CompanionsForm";
 
 export const metadata: Metadata = {
   title: "استمارة المرافقين | منارة",
-  description: "استمارة الانخراط ضمن فريق المرافقين للفرق التخصصية في أكاديمية جيل الترجيح.",
+  description: "استمارة الانخراط ضمن المرافقون للفرق التخصصية في أكاديمية جيل الترجيح.",
 };
 
 const CONTRIBUTIONS = [
@@ -35,12 +35,12 @@ export default function CompanionsPage() {
                   <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: '"FILL" 1' }}>
                     diversity_3
                   </span>
-                  <span className="text-sm font-bold">فريق المرافقين</span>
+                  <span className="text-sm font-bold">المرافقون</span>
                 </div>
 
                 <h1 className="font-h2 text-h2 text-on-surface">استمارة المرافقين</h1>
                 <p className="mt-4 leading-8 text-on-surface-variant">
-                  إيماناً من أكاديمية جيل الترجيح بأهمية التراكم القيادي ونقل الخبرات بين الدفعات، نفتح باب الانخراط ضمن فريق المرافقين للفرق التخصصية، بهدف دعم الفرق، توجيه الأفراد، ومرافقة المسارات العملية والتكوينية داخل فضاءات الفاعلية بالأكاديمية.
+                  إيماناً من أكاديمية جيل الترجيح بأهمية التراكم القيادي ونقل الخبرات بين الدفعات، نفتح باب الانخراط ضمن المرافقون للفرق التخصصية، بهدف دعم الفرق، توجيه الأفراد، ومرافقة المسارات العملية والتكوينية داخل فضاءات الفاعلية بالأكاديمية.
                 </p>
 
                 <div className="mt-7 space-y-5">
