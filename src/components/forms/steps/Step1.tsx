@@ -1,6 +1,6 @@
 import type { StepProps } from "../form-types";
-import { WILAYAS } from "../form-types";
-import { Field, TextInput, Divider, SectionTitle, inputCls } from "../form-ui";
+import { WILAYAS, GENDERS, STAGES } from "../form-types";
+import { Field, TextInput, Divider, SectionTitle, inputCls, RadioCards } from "../form-ui";
 import { cn } from "@/lib/utils";
 
 export function Step1({ data, set, errors }: StepProps) {
@@ -17,8 +17,28 @@ export function Step1({ data, set, errors }: StepProps) {
           <TextInput value={data.fullName} onChange={v => set("fullName", v)} placeholder="اكتب اسمك الكامل" required hasError={!!errors.fullName} />
         </Field>
 
+        <Field label="الجنس" required error={errors.gender}>
+          <RadioCards
+            legend="الجنس"
+            value={data.gender}
+            onChange={v => set("gender", v)}
+            hasError={!!errors.gender}
+            options={GENDERS.map(g => ({ value: g, label: g }))}
+          />
+        </Field>
+
         <Field label="العمر" required error={errors.age}>
           <TextInput value={data.age} onChange={v => set("age", v)} placeholder="مثال: 22" required inputMode="numeric" hasError={!!errors.age} />
+        </Field>
+
+        <Field label="المرحلة" required error={errors.stage}>
+          <RadioCards
+            legend="المرحلة"
+            value={data.stage}
+            onChange={v => set("stage", v)}
+            hasError={!!errors.stage}
+            options={STAGES.map(s => ({ value: s, label: s }))}
+          />
         </Field>
 
         <Field label="المستوى الدراسي" required error={errors.educationLevel}>

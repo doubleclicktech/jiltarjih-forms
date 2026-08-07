@@ -3,12 +3,14 @@ import { z } from "zod";
 export const step1Schema = z.object({
   registrationNumber: z.string().min(1, "رقم التسجيل مطلوب"),
   fullName: z.string().min(2, "الاسم الكامل مطلوب (حرفان على الأقل)"),
+  gender: z.string().refine((v) => ["ذكر", "انثى"].includes(v), "يرجى اختيار الجنس"),
   age: z.string()
     .min(1, "العمر مطلوب")
     .refine(
       (v) => /^\d{1,2}$/.test(v) && +v >= 15 && +v <= 60,
       "أدخل عمراً صحيحاً بين 15 و60 سنة"
     ),
+  stage: z.string().refine((v) => ["التنشئة", "ريادي", "تمكين", "قيادي"].includes(v), "يرجى اختيار المرحلة"),
   educationLevel: z.string().min(1, "المستوى الدراسي مطلوب"),
   wilaya:         z.string().min(1, "يرجى اختيار الولاية"),
   phone:          z.string().regex(/^0[567]\d{8}$/, "رقم الهاتف غير صحيح (مثال: 0551234567)"),

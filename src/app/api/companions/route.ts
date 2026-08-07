@@ -8,7 +8,9 @@ const text = z.string().max(4000).optional().default("");
 
 const companionSchema = z.object({
   fullName: z.string().min(2).max(120),
+  gender: z.enum(["ذكر", "انثى"]),
   age: z.string().regex(/^\d{1,2}$/).refine(v => Number(v) >= 18 && Number(v) <= 70),
+  stage: z.enum(["التنشئة", "ريادي", "تمكين", "قيادي"]),
   educationLevel: z.string().min(1).max(120),
   specialty: text,
   job: text,
@@ -62,7 +64,9 @@ type BetterSqlite3Database = {
 const FIELD_LABELS: Record<keyof CompanionData | "createdAt", string> = {
   createdAt: "تاريخ الإرسال",
   fullName: "الاسم الكامل",
+  gender: "الجنس",
   age: "العمر",
+  stage: "المرحلة",
   educationLevel: "المستوى الدراسي",
   specialty: "التخصص",
   job: "الوظيفة",

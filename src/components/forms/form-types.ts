@@ -22,6 +22,10 @@ export const POSSESSED_SKILLS = [
   "الكتابة الأدبية","البحث والتحليل",
 ];
 
+export const GENDERS = ["ذكر", "انثى"];
+
+export const STAGES = ["التنشئة", "ريادي", "تمكين", "قيادي"];
+
 export const SKILL_LEVELS: { value: SkillLevel; label: string }[] = [
   { value: "weak",      label: "ضعيف"  },
   { value: "medium",    label: "متوسط" },
@@ -68,7 +72,7 @@ export const STEPS = TEAM_STEPS;
 export const INITIAL: FullRegistrationFormData = {
   registrationType: "team",
   registrationNumber:"",
-  fullName:"", age:"", educationLevel:"", specialty:"", job:"",
+  fullName:"", gender:"", age:"", stage:"", educationLevel:"", specialty:"", job:"",
   wilaya:"", groupName:"", batch:"", phone:"", email:"",
   telegramLink:"", linkedinLink:"",
   hoursPerWeek:"", activityTypes:[], hasTransportation:"",

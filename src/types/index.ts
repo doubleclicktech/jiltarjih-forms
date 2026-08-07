@@ -75,7 +75,9 @@ export type FullRegistrationFormData = {
   // Step 1 – personal
   registrationNumber: string;
   fullName: string;
+  gender: string;
   age: string;
+  stage: string;
   educationLevel: string;
   specialty: string;
   job: string;

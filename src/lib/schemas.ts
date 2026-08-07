@@ -31,9 +31,11 @@ export const registrationSchema = z.object({
   // Step 1 – personal
   registrationNumber: z.string().min(1, "رقم التسجيل مطلوب").max(50),
   fullName: z.string().min(2, "الاسم الكامل مطلوب").max(100),
+  gender: z.string().refine((v) => ["ذكر", "انثى"].includes(v), "الجنس مطلوب"),
   age: z.string()
     .regex(/^\d{1,2}$/, "العمر غير صالح")
     .refine((v) => +v >= 15 && +v <= 60, "العمر يجب أن يكون بين 15 و60 سنة"),
+  stage: z.string().refine((v) => ["التنشئة", "ريادي", "تمكين", "قيادي"].includes(v), "المرحلة مطلوبة"),
   educationLevel: z.string().min(1, "المستوى الدراسي مطلوب").max(100),
   specialty: z.string().max(150).optional().default(""),
   job: z.string().max(150).optional().default(""),

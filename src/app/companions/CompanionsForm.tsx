@@ -38,6 +38,10 @@ const SKILL_LEVELS = [
   ["excellent", "ممتاز"],
 ] as const;
 
+const GENDERS = ["ذكر", "انثى"];
+
+const STAGES = ["التنشئة", "ريادي", "تمكين", "قيادي"];
+
 const TEAMS = [
   "فريق بادر لإدارة الحملات",
   "فريق مقاوم لدعم القضية الفلسطينية",
@@ -51,7 +55,9 @@ const TEAMS = [
 
 const INITIAL = {
   fullName: "",
+  gender: "",
   age: "",
+  stage: "",
   educationLevel: "",
   specialty: "",
   job: "",
@@ -170,7 +176,7 @@ export function CompanionsForm() {
 
   function validate() {
     const next: Record<string, string> = {};
-    for (const key of ["fullName", "age", "educationLevel", "wilaya", "batch", "phone", "email"] as const) {
+    for (const key of ["fullName", "gender", "age", "stage", "educationLevel", "wilaya", "batch", "phone", "email"] as const) {
       if (!String(data[key]).trim()) next[key] = "هذا الحقل مطلوب";
     }
     if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) next.email = "البريد الإلكتروني غير صالح";
@@ -240,9 +246,11 @@ export function CompanionsForm() {
           <Field label="الاسم الكامل" required error={errors.fullName}>
             <input className={inputClass} value={data.fullName} onChange={e => set("fullName", e.target.value)} />
           </Field>
+          <ChoiceGroup label="الجنس" options={GENDERS} value={data.gender} onChange={v => set("gender", v)} error={errors.gender} />
           <Field label="العمر" required error={errors.age}>
             <input className={inputClass} value={data.age} onChange={e => set("age", e.target.value)} inputMode="numeric" />
           </Field>
+          <ChoiceGroup label="المرحلة" options={STAGES} value={data.stage} onChange={v => set("stage", v)} error={errors.stage} />
           <Field label="المستوى الدراسي" required error={errors.educationLevel}>
             <input className={inputClass} value={data.educationLevel} onChange={e => set("educationLevel", e.target.value)} />
           </Field>

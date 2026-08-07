@@ -4,7 +4,9 @@ import { registrationSchema } from "./schemas";
 const validBase = {
   registrationNumber: "12345",
   fullName: "عبد الرحمن بن خلدون",
+  gender: "ذكر",
   age: "25",
+  stage: "ريادي",
   educationLevel: "ليسانس",
   specialty: "علوم الحاسوب",
   job: "طالب",
