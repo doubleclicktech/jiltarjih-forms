@@ -13,7 +13,7 @@ const RESOURCE_LINKS = [
   { label: "منهجية المرافقة", href: "#" },
   { label: "عن أكاديمية جيل الترجيح", href: "#" },
   { label: "سياسة الخصوصية", href: "#" },
-  { label: "تواصل معنا", href: "#" },
+  { label: "تواصل معنا", href: "/contact" },
 ];
 
 export function Footer() {
