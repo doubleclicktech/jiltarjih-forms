@@ -1,8 +1,8 @@
-import Link from "next/link";
 import type { Project } from "@/types";
 import { cn } from "@/lib/utils";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { getTrackNameForProject } from "@/data/tracks";
+import { CardCTA } from "./CardCTA";
 
 export function ProjectCard({ project }: { project: Project }) {
   const trackName = getTrackNameForProject(project.slug) ?? project.category;
@@ -54,13 +54,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </p>
 
         <div className="mt-auto flex items-center justify-end border-t border-outline-variant/60 pt-4">
-          <Link
-            className="flex items-center gap-2 font-bold text-primary transition-all hover:gap-3 hover:underline"
-            href={`/projects/${project.slug}`}
-          >
-            تفاصيل المشروع
-            <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-          </Link>
+          <CardCTA href={`/projects/${project.slug}`} label="تفاصيل المشروع" />
         </div>
       </div>
     </div>

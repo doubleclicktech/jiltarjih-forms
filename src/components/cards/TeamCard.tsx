@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Team } from "@/types";
 import { cn } from "@/lib/utils";
 import { getTrackNameForTeam } from "@/data/tracks";
+import { CardCTA } from "./CardCTA";
 
 export function TeamCard({ team }: { team: Team }) {
   const available = team.availability === "available";
@@ -67,13 +67,7 @@ export function TeamCard({ team }: { team: Team }) {
         </p>
 
         <div className="mt-auto flex items-center justify-end border-t border-outline-variant/60 pt-4">
-          <Link
-            className="flex items-center gap-2 font-bold text-primary transition-all hover:gap-3 hover:underline"
-            href={`/teams/${team.slug}`}
-          >
-            عرض التفاصيل
-            <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-          </Link>
+          <CardCTA href={`/teams/${team.slug}`} label="عرض التفاصيل" />
         </div>
       </div>
     </div>
