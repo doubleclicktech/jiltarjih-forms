@@ -124,7 +124,7 @@ export async function POST(req: Request) {
     req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
     req.headers.get("x-real-ip") ??
     "unknown";
-  const rl = checkRateLimit(`companions:${ip}`);
+  const rl = checkRateLimit(`companions:${ip}`, null);
   if (!rl.allowed) {
     return NextResponse.json(
       { ok: false, error: "RATE_LIMITED" },
